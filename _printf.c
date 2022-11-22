@@ -1,6 +1,3 @@
-/*
- * Created by jojo on 11/22/22.
-*/
 #include "main.h"
 
 /**
@@ -12,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0;
+	int i = 0, count = 0, op_count = 0;
 	va_list list;
 
 	va_start(list, format);
@@ -22,14 +19,14 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			get_op_function(format[i])(list);
+			op_count += get_op_function(format[i])(list);
 			i++;
 		} else
 		{
-			_putchar(format[i]);
+			count += _putchar(format[i]);
 			i++;
 		}
 	}
 	va_end(list);
-	return (0);
+	return (count + op_count);
 }

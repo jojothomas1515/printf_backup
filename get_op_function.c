@@ -1,5 +1,3 @@
-/* Created by jojo on 11/22/22. */
-
 #include "main.h"
 /**
  * get_op_function - return a pointer to character corresponding function
@@ -8,8 +6,7 @@
  */
 int (*get_op_function(char flag))(va_list list)
 {
-	wr_ops wr_ops_1[] = {{'c', write_char},
-			     {'s', write_string},};
+	wr_ops wr_ops_1[] = {{'c', write_char}, {'s', write_string},};
 
 	int i;
 

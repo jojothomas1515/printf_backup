@@ -1,8 +1,6 @@
 #ifndef MYPRINTF__MAIN_H_
 #define MYPRINTF__MAIN_H_
-/*
- * Created by jojo on 11/22/22.
-*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>

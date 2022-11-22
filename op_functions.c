@@ -1,6 +1,3 @@
-/*
- * Created by jojo on 11/22/22.
-*/
 #include "main.h"
 
 /**
@@ -23,7 +20,7 @@ int write_char(va_list list)
 int write_string(va_list list)
 {
 	char *s = va_arg(list, char *);
-	_uint len = _strlen(s);
+	int len = _strlen(s);
 
 	return (write_handler(s, len));
 }

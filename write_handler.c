@@ -1,6 +1,3 @@
-/*
- * Created by jojo on 11/22/22.
-*/
 #include "main.h"
 
 /**
