@@ -11,7 +11,7 @@ int write_char(va_list list)
 
 	if (s)
 		return (_putchar(s));
-	return (0);
+	return (1);
 }
 
 /**
