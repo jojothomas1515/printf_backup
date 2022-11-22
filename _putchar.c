@@ -6,7 +6,8 @@
 
 /**
 * _putchar - prints a character
- *
+ * @c: character
+ * Return:0;
 */
 
 int _putchar(char c)

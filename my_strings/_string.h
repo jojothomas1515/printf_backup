@@ -3,5 +3,5 @@
 /*
  * Created by jojo on 11/22/22.
 */
-int _strlen (char *);
+int _strlen(char *);
 #endif /* MYPRINTF_MY_STRINGS__STRING_H_ */

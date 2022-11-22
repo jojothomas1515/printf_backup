@@ -11,6 +11,7 @@
 int write_char(va_list list)
 {
 	char s = va_arg(list, int);
+
 	return (write_handler(&s, 1));
 }
 
@@ -23,5 +24,6 @@ int write_string(va_list list)
 {
 	char *s = va_arg(list, char *);
 	_uint len = _strlen(s);
+
 	return (write_handler(s, len));
 }

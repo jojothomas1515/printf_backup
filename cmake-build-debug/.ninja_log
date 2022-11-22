@@ -30,3 +30,10 @@
 0	26	1669135820587890278	CMakeFiles/MyPrintf.dir/op_functions.c.o	67efdb171f6efffc
 0	27	1669135820591890353	CMakeFiles/MyPrintf.dir/get_op_function.c.o	b43d5998fb49be35
 27	55	1669135820619890877	MyPrintf	eb3aaa3bd1818516
+1	27	1669136313309114428	CMakeFiles/MyPrintf.dir/op_functions.c.o	67efdb171f6efffc
+1	38	1669136313321114652	CMakeFiles/MyPrintf.dir/_putchar.c.o	79ee36918d798a08
+0	39	1669136313321114652	CMakeFiles/MyPrintf.dir/main.c.o	8b3584df6b2d1716
+27	62	1669136313341115026	CMakeFiles/MyPrintf.dir/write_handler.c.o	6f9142c87de3c915
+38	64	1669136313345115101	CMakeFiles/MyPrintf.dir/get_op_function.c.o	b43d5998fb49be35
+39	72	1669136313353115251	CMakeFiles/MyPrintf.dir/_printf.c.o	4eb6824aa0f51cd8
+72	95	1669136313377115700	MyPrintf	eb3aaa3bd1818516
