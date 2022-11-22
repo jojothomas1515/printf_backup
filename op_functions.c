@@ -9,7 +9,9 @@ int write_char(va_list list)
 {
 	char s = va_arg(list, int);
 
-	return (write_handler(&s, 1));
+	if (s)
+		return (write_handler(&s, 1));
+	return (0);
 }
 
 /**
@@ -20,7 +22,13 @@ int write_char(va_list list)
 int write_string(va_list list)
 {
 	char *s = va_arg(list, char *);
-	int len = _strlen(s);
 
-	return (write_handler(s, len));
+	if (s)
+	{
+		int len = _strlen(s);
+
+		return (write_handler(s, len));
+	}
+	return (0);
+
 }
