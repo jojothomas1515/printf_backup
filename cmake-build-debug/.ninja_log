@@ -1,0 +1,8 @@
+# ninja log v5
+0	31	1669157290130133017	CMakeFiles/MyPrintf.dir/_printf.c.o	fe2bae769c360be4
+0	45	1669157290146133103	CMakeFiles/MyPrintf.dir/_write_char.c.o	dc74d01079a53525
+0	55	1669157290154133146	CMakeFiles/MyPrintf.dir/utils_help.c.o	5873f994c1bd8f83
+31	81	1669157290182133296	CMakeFiles/MyPrintf.dir/number_base.c.o	124987d5fa1bc912
+45	92	1669157290194133361	CMakeFiles/MyPrintf.dir/get_ops_parse.c.o	45a9118d87c340df
+56	99	1669157290198133383	CMakeFiles/MyPrintf.dir/str_man.c.o	fbbbcb5eca1581f
+81	113	1669157290214133469	CMakeFiles/MyPrintf.dir/print_number.c.o	9e73502383a67772
