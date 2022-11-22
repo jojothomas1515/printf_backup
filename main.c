@@ -2,9 +2,9 @@
 
 int main()
 {
-	char *str = "hello how are you %c%c%c%c\n";
+	char *str = "hello how are you %s\n";
 
-	_printf(str, 'j','o','j','o');
+	_printf(str, "JojoThomas");
 
 	return 0;
 }

@@ -7,8 +7,8 @@ int (*get_op_function(char flag))(va_list list)
 {
 	wr_ops wr_ops_1[] ={
 		{'c', write_char},
-		/*{'s',write_string},
-		{'d', write_int},
+		{'s',write_string},
+		/*{'d', write_int},
 		{'x', write_hex},*/
 		};
 
