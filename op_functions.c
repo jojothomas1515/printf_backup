@@ -21,17 +21,16 @@ int write_char(va_list list)
  */
 int write_string(va_list list)
 {
+	int i = 0;
 	char *s = va_arg(list, char *);
 
-	if(s == NULL)
+	if (s == NULL)
 		s = "(null)";
 
-	if (s)
+	while (s[i] != '\0')
 	{
-		int len = _strlen(s);
-
-		return (write_handler(s, len));
+		_putchar(s[i]);
+		i++;
 	}
-	return (0);
-
+	return (i);
 }
