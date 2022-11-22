@@ -19,7 +19,10 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			op_count += get_op_function(format[i])(list);
+			if (format[i] != '%')
+				op_count += get_op_function(format[i])(list);
+			else
+				count += _putchar(format[i]);
 			i++;
 		} else
 		{
