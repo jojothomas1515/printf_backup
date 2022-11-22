@@ -1,36 +1,48 @@
 #ifndef MYPRINTF__MAIN_H_
 #define MYPRINTF__MAIN_H_
-
-#include <stdio.h>
-#include <unistd.h>
 #include <stdarg.h>
-#include "_string.h"
+#include <unistd.h>
 
-int _putchar(char c);
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdarg.h>
+
 /**
- * struct op - operation struct map a specific char to it appropriate
- * function
- * @c: character
- * @f: function pointer
- */
-typedef struct op
+* struct convert - defines a structure for symbols and functions
+*
+* @sym: The operator
+* @f: The function associated
+*/
+struct convert
 {
-	char c;
-	int (*f)(va_list list);
-} wr_ops;
+	char *sym;
+	int (*f)(va_list);
+};
+typedef struct convert conver_t;
 
-typedef unsigned int _uint;
-
-int (*get_op_function(char))(va_list list);
-
-/* output stream handler for different types */
-int write_char(va_list);
-int write_string(va_list);
-int write_int(va_list);
-int write_hex(va_list);
-
-/* write handler */
-int write_handler(char *, int);
-
+/*Main functions*/
+int parser(const char *format, conver_t f_list[], va_list arg_list);
 int _printf(const char *format, ...);
+int _write_char(char);
+int print_char(va_list);
+int print_string(va_list);
+int print_percent(va_list);
+int print_integer(va_list);
+int print_number(va_list);
+int print_binary(va_list);
+int print_reversed(va_list arg);
+int rot13(va_list);
+int unsigned_integer(va_list);
+int print_octal(va_list list);
+int print_hex(va_list list);
+int print_heX(va_list list);
+
+/*Helper functions*/
+unsigned int base_len(unsigned int, int);
+char *rev_string(char *);
+void write_base(char *str);
+char *_memcpy(char *dest, char *src, unsigned int n);
+int print_unsgined_number(unsigned int);
+
+
 #endif /* MYPRINTF__MAIN_H_ */

@@ -49,32 +49,14 @@ cmake_ninja_workdir = /home/jojo/CLionProjects/MyPrintf/cmake-build-debug/
 
 build cmake_object_order_depends_target_MyPrintf: phony || CMakeFiles/MyPrintf.dir
 
-build CMakeFiles/MyPrintf.dir/main.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/main.c || cmake_object_order_depends_target_MyPrintf
-  DEP_FILE = CMakeFiles/MyPrintf.dir/main.c.o.d
+build CMakeFiles/MyPrintf.dir/_write_char.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/_write_char.c || cmake_object_order_depends_target_MyPrintf
+  DEP_FILE = CMakeFiles/MyPrintf.dir/_write_char.c.o.d
   FLAGS = -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 -g -std=gnu90
   OBJECT_DIR = CMakeFiles/MyPrintf.dir
   OBJECT_FILE_DIR = CMakeFiles/MyPrintf.dir
 
-build CMakeFiles/MyPrintf.dir/_putchar.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/_putchar.c || cmake_object_order_depends_target_MyPrintf
-  DEP_FILE = CMakeFiles/MyPrintf.dir/_putchar.c.o.d
-  FLAGS = -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 -g -std=gnu90
-  OBJECT_DIR = CMakeFiles/MyPrintf.dir
-  OBJECT_FILE_DIR = CMakeFiles/MyPrintf.dir
-
-build CMakeFiles/MyPrintf.dir/op_functions.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/op_functions.c || cmake_object_order_depends_target_MyPrintf
-  DEP_FILE = CMakeFiles/MyPrintf.dir/op_functions.c.o.d
-  FLAGS = -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 -g -std=gnu90
-  OBJECT_DIR = CMakeFiles/MyPrintf.dir
-  OBJECT_FILE_DIR = CMakeFiles/MyPrintf.dir
-
-build CMakeFiles/MyPrintf.dir/write_handler.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/write_handler.c || cmake_object_order_depends_target_MyPrintf
-  DEP_FILE = CMakeFiles/MyPrintf.dir/write_handler.c.o.d
-  FLAGS = -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 -g -std=gnu90
-  OBJECT_DIR = CMakeFiles/MyPrintf.dir
-  OBJECT_FILE_DIR = CMakeFiles/MyPrintf.dir
-
-build CMakeFiles/MyPrintf.dir/get_op_function.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/get_op_function.c || cmake_object_order_depends_target_MyPrintf
-  DEP_FILE = CMakeFiles/MyPrintf.dir/get_op_function.c.o.d
+build CMakeFiles/MyPrintf.dir/utils_help.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/utils_help.c || cmake_object_order_depends_target_MyPrintf
+  DEP_FILE = CMakeFiles/MyPrintf.dir/utils_help.c.o.d
   FLAGS = -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 -g -std=gnu90
   OBJECT_DIR = CMakeFiles/MyPrintf.dir
   OBJECT_FILE_DIR = CMakeFiles/MyPrintf.dir
@@ -85,8 +67,26 @@ build CMakeFiles/MyPrintf.dir/_printf.c.o: C_COMPILER__MyPrintf_Debug /home/jojo
   OBJECT_DIR = CMakeFiles/MyPrintf.dir
   OBJECT_FILE_DIR = CMakeFiles/MyPrintf.dir
 
-build CMakeFiles/MyPrintf.dir/_strlen.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/_strlen.c || cmake_object_order_depends_target_MyPrintf
-  DEP_FILE = CMakeFiles/MyPrintf.dir/_strlen.c.o.d
+build CMakeFiles/MyPrintf.dir/number_base.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/number_base.c || cmake_object_order_depends_target_MyPrintf
+  DEP_FILE = CMakeFiles/MyPrintf.dir/number_base.c.o.d
+  FLAGS = -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 -g -std=gnu90
+  OBJECT_DIR = CMakeFiles/MyPrintf.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyPrintf.dir
+
+build CMakeFiles/MyPrintf.dir/get_ops_parse.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/get_ops_parse.c || cmake_object_order_depends_target_MyPrintf
+  DEP_FILE = CMakeFiles/MyPrintf.dir/get_ops_parse.c.o.d
+  FLAGS = -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 -g -std=gnu90
+  OBJECT_DIR = CMakeFiles/MyPrintf.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyPrintf.dir
+
+build CMakeFiles/MyPrintf.dir/str_man.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/str_man.c || cmake_object_order_depends_target_MyPrintf
+  DEP_FILE = CMakeFiles/MyPrintf.dir/str_man.c.o.d
+  FLAGS = -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 -g -std=gnu90
+  OBJECT_DIR = CMakeFiles/MyPrintf.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyPrintf.dir
+
+build CMakeFiles/MyPrintf.dir/print_number.c.o: C_COMPILER__MyPrintf_Debug /home/jojo/CLionProjects/MyPrintf/print_number.c || cmake_object_order_depends_target_MyPrintf
+  DEP_FILE = CMakeFiles/MyPrintf.dir/print_number.c.o.d
   FLAGS = -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 -g -std=gnu90
   OBJECT_DIR = CMakeFiles/MyPrintf.dir
   OBJECT_FILE_DIR = CMakeFiles/MyPrintf.dir
@@ -99,7 +99,7 @@ build CMakeFiles/MyPrintf.dir/_strlen.c.o: C_COMPILER__MyPrintf_Debug /home/jojo
 #############################################
 # Link the executable MyPrintf
 
-build MyPrintf: C_EXECUTABLE_LINKER__MyPrintf_Debug CMakeFiles/MyPrintf.dir/main.c.o CMakeFiles/MyPrintf.dir/_putchar.c.o CMakeFiles/MyPrintf.dir/op_functions.c.o CMakeFiles/MyPrintf.dir/write_handler.c.o CMakeFiles/MyPrintf.dir/get_op_function.c.o CMakeFiles/MyPrintf.dir/_printf.c.o CMakeFiles/MyPrintf.dir/_strlen.c.o
+build MyPrintf: C_EXECUTABLE_LINKER__MyPrintf_Debug CMakeFiles/MyPrintf.dir/_write_char.c.o CMakeFiles/MyPrintf.dir/utils_help.c.o CMakeFiles/MyPrintf.dir/_printf.c.o CMakeFiles/MyPrintf.dir/number_base.c.o CMakeFiles/MyPrintf.dir/get_ops_parse.c.o CMakeFiles/MyPrintf.dir/str_man.c.o CMakeFiles/MyPrintf.dir/print_number.c.o
   FLAGS = -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 -g
   OBJECT_DIR = CMakeFiles/MyPrintf.dir
   POST_BUILD = :
