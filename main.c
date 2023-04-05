@@ -1,9 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
+/**
+ * main - Entry point
+ *
+ * Return: 0 on success, error code otherwise
+ */
 int main(void)
 {
-	int count = _printf("hello %s how are you \n", "Jojo Thomas");
+	_printf("%");
 
-
-	return (count);
+	return (0);
 }
