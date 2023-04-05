@@ -30,3 +30,16 @@ int print_str(va_list ap)
 
 	return (count);
 }
+
+/*
+ * print_percent - print percent
+ * @ap: va_list
+ * Return:1
+ */
+
+int print_percent(va_list ap)
+{
+	(void) ap;
+
+	return(_putchar('%'));
+}
