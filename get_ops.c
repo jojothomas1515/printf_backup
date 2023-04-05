@@ -18,6 +18,6 @@ int (*get_ops(char c))(va_list ap)
 		if (c == ops[i].c)
 			return (ops[i].func);
 	}
-	return (NULL);
+	return (0);
 }
 
