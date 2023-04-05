@@ -25,6 +25,6 @@ int _printf(const char *format, ...)
 		write_count += _putchar(*format);
 		format++;
 	}
-
+	va_end(ap);
 	return (write_count);
 }
