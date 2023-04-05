@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			if (*format == '\0')
-				return(write_count);
+				return(write_count + 1);
 			write_count += get_ops(*format)(ap);
 			format++;
 			continue;
