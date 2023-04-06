@@ -116,7 +116,7 @@ int print_String(va_list ap)
 		str = "(null)";
 	while (*str != '\0')
 	{
-		if (*str > 32 && *str < 127)
+		if (*str > 31 && *str < 127)
 		{
 			count += _putchar(*str);
 
