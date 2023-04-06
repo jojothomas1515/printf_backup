@@ -53,4 +53,12 @@ CMakeFiles/_printf.dir/main.c.o: /home/jojo/CLionProjects/printf/main.c \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h

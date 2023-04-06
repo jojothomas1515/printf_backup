@@ -46,7 +46,15 @@ CMakeFiles/_printf.dir/_printf.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h /usr/include/stdio.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
