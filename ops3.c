@@ -8,7 +8,7 @@
 int print_voidp(va_list ap)
 {
 	char *h_str = malloc(BUFFER_SIZE);
-	long long   num = (long long ) va_arg(ap, long long ), i;
+	long int   num = (long int ) va_arg(ap, long int ), i;
 	char *arr = "0123456789abcdef";
 
 	if (h_str == NULL)
