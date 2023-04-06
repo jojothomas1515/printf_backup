@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strrev - reverse string
@@ -71,7 +72,7 @@ int p_str(char *str)
 int p_hex(int hex)
 {
 	char *h_str = malloc(BUFFER_SIZE);
-	uint num = hex, i;
+	uint num = hex, i, own = hex;
 	char *arr = "0123456789ABCDEF";
 
 	if (h_str == NULL)
@@ -79,21 +80,18 @@ int p_hex(int hex)
 
 	for (i = 0; num > 0; i++)
 	{
-		if (num > 15)
-		{
-			h_str[i++] = arr[(num % 16)];
-			h_str[i++] = 'x';
-			h_str[i] = '\\';
-		}
-		else
-		{
-			h_str[i++] = arr[(num % 16)];
-			h_str[i++] = '0';
-			h_str[i++] = 'x';
-			h_str[i] = '\\';
-
-		}
+		h_str[i] = arr[(num % 16)];
 		num /= 16;
+	}
+	if (own > 15)
+	{
+		h_str[i++] = 'x';
+		h_str[i++] = '\\';
+	} else
+	{
+		h_str[i++] = '0';
+		h_str[i++] = 'x';
+		h_str[i++] = '\\';
 	}
 	h_str[i] = '\0';
 	_strrev(h_str);
