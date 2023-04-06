@@ -48,9 +48,8 @@ int print_percent(va_list ap)
 /**
  * print_integer - print out an integer
  * @ap: va_list
- * ReturnL write_count
+ * Return: write_count
 */
-
 int print_integer(va_list ap)
 {
 	int num = va_arg(ap, int), count = 0, sign = 0, i = 0;
