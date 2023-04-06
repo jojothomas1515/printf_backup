@@ -273,6 +273,30 @@ ops2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_printf.dir/build.make CMakeFiles/_printf.dir/ops2.c.s
 .PHONY : ops2.c.s
 
+ops3.o: ops3.c.o
+.PHONY : ops3.o
+
+# target to build an object file
+ops3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_printf.dir/build.make CMakeFiles/_printf.dir/ops3.c.o
+.PHONY : ops3.c.o
+
+ops3.i: ops3.c.i
+.PHONY : ops3.i
+
+# target to preprocess a source file
+ops3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_printf.dir/build.make CMakeFiles/_printf.dir/ops3.c.i
+.PHONY : ops3.c.i
+
+ops3.s: ops3.c.s
+.PHONY : ops3.s
+
+# target to generate assembly for a file
+ops3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_printf.dir/build.make CMakeFiles/_printf.dir/ops3.c.s
+.PHONY : ops3.c.s
+
 utilities.o: utilities.c.o
 .PHONY : utilities.o
 
@@ -324,6 +348,9 @@ help:
 	@echo "... ops2.o"
 	@echo "... ops2.i"
 	@echo "... ops2.s"
+	@echo "... ops3.o"
+	@echo "... ops3.i"
+	@echo "... ops3.s"
 	@echo "... utilities.o"
 	@echo "... utilities.i"
 	@echo "... utilities.s"

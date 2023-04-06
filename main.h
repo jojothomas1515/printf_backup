@@ -34,12 +34,15 @@ int print_octal(va_list);
 int print_hex(va_list);
 int print_HEX(va_list);
 int print_String(va_list ap);
-int p_hex(int hex);
+int print_voidp(va_list ap);
+
 
 /* utilities */
 int _strlen(char *);
 void _strrev(char *);
 int p_str(char *str);
+int p_hex(int hex);
+
 
 int (*get_ops(char))(va_list);
 
