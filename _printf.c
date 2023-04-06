@@ -18,12 +18,11 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			if (*format == '\0')
-				return (write_count);
-			if (get_ops(*format) == 0)
-				return (-1);
-			write_count += get_ops(*format)(ap);
-			format++;
+
+			if (get_ops(*format) != 0)
+				write_count += get_ops(*format)(ap);
+			if (*format != '\0')
+				format++;
 			continue;
 		}
 		write_count += _putchar(*format);

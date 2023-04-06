@@ -9,6 +9,6 @@
  */
 int main(void)
 {
-	_printf("%%!\n", "kpkp tjskd");
-	return (0);
+
+	return (_printf("%K\n"));
 }
