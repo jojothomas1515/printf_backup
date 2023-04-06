@@ -25,6 +25,7 @@ int _printf(const char *format, ...)
 				format++;
 				continue;
 			}else if (*format != '\0')
+				format--;
 				goto print_format;
 
 		}
