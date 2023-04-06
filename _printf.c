@@ -24,11 +24,12 @@ int _printf(const char *format, ...)
 				write_count += get_ops(*format)(ap);
 				format++;
 				continue;
-			} else
+			} else if (*format != '\0')
 			{
 				format--;
 				goto print_format;
 			}
+			continue;
 
 		}
 			print_format:
