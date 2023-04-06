@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 			}
 			return (-1);
 		}
-			print_format:
+print_format:
 		write_count += _putchar(*format);
 		format++;
 	}
