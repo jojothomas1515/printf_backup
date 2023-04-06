@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+/* my macro */
+#define BUFFER_SIZE 1024
+
 /* my structure */
 /**
  * struct operations_s - structure
@@ -26,6 +29,10 @@ int print_str(va_list);
 int print_percent(va_list);
 int print_integer(va_list);
 int print_binary(va_list);
+int print_unsigned(va_list);
+int print_octal(va_list);
+int print_hex(va_list);
+int print_HEX(va_list);
 
 /* utilities */
 int _strlen(char *);
