@@ -21,10 +21,14 @@ int _printf(const char *format, ...)
 
 			if (get_ops(*format) != 0)
 				write_count += get_ops(*format)(ap);
-			if (*format != '\0')
+			else if (*format != '\0')
 				format++;
+			else
+				goto print_format;
+
 			continue;
 		}
+			print_format:
 		write_count += _putchar(*format);
 		format++;
 	}
