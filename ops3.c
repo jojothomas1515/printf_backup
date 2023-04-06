@@ -8,17 +8,14 @@
 int print_voidp(va_list ap)
 {
 	char *h_str = malloc(BUFFER_SIZE);
-	long int num = (long int) va_arg(ap, long int), i, t;
+	unsigned long num, i;
 	char *arr = "0123456789abcdef";
 
-	t = num;
+	num = (unsigned long int) va_arg(ap, unsigned long int);
 	if (h_str == NULL)
 		return (0);
 	if (num == 0)
 		return (p_str("(nil)"));
-
-	if (num < 0)
-		num = LONG_MAX + (t + 1);
 
 	for (i = 0; num > 0; i++)
 	{
