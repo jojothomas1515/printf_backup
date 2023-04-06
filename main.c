@@ -10,10 +10,9 @@
 int main(void)
 {
 	int len, len2;
-	void *p = (void *)0x7fff5100b608;
 
-	len = _printf("%p\n", p);
-	len2 = printf("%p\n", p);
+	len = _printf("%p", NULL);
+	len2 = printf("%p", NULL);
 	fflush(stdout);
 	if (len != len2)
 	{

@@ -14,7 +14,7 @@ int print_voidp(va_list ap)
 	if (h_str == NULL)
 		return (0);
 	if (num == 0)
-		return (_putchar('0'));
+		return (p_str("(nil)"));
 
 	for (i = 0; num > 0; i++)
 	{
