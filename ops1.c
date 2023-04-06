@@ -53,7 +53,7 @@ int print_percent(va_list ap)
 int print_integer(va_list ap)
 {
 	int num = va_arg(ap, int), count = 0, sign = 0, i = 0;
-	unsigned  int u_num;
+	unsigned int u_num;
 	char *num_str = malloc(1024);
 
 	if (num_str == NULL)
@@ -64,12 +64,11 @@ int print_integer(va_list ap)
 	{
 		sign = 1;
 		u_num = num * -1;
-	}
-	else
+	} else
 		u_num = num;
 	while (u_num > 0)
 	{
-		num_str[i] = (u_num  % 10) + '0';
+		num_str[i] = (u_num % 10) + '0';
 		u_num /= 10;
 		i++;
 	}
@@ -86,4 +85,31 @@ int print_integer(va_list ap)
 		num_str++;
 	}
 	return (count);
+}
+
+/**
+ * print_binary - print out the binary representation of unsigned int
+ * @ap: variadic list
+ * Return: count of with is printed
+ */
+
+int print_binary(va_list ap)
+{
+	char *b_str = malloc(1024);
+	int i;
+	uint num = (int) va_arg(ap, int);
+
+	if (num == 0)
+		return (_putchar('0'));
+
+	for (i = 0; num > 0; i++)
+	{
+		b_str[i] = (char) (num / 2);
+		num /= 2;
+	}
+	b_str[i] = '\0';
+
+	_strrev(b_str);
+
+	return (p_str(b_str));
 }

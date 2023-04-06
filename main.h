@@ -25,9 +25,12 @@ int print_char(va_list);
 int print_str(va_list);
 int print_percent(va_list);
 int print_integer(va_list);
+int print_binary(va_list);
 
+/* utilities */
 int _strlen(char *);
 void _strrev(char *);
+int p_str(char *str);
 
 int (*get_ops(char))(va_list);
 
