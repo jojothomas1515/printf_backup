@@ -25,7 +25,7 @@ void _strrev(char *str)
 
 /**
  * _strlen - return the length of a string
- * @str
+ * @str: target string
  * Return: str length
  */
 int _strlen(char *str)
