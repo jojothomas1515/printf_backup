@@ -42,3 +42,23 @@ int _strlen(char *str)
 	}
 	return (count);
 }
+
+/**
+ * p_str - print out string
+ * @str: target string
+ * Return: count
+ */
+int p_str(char *str)
+{
+	int count = 0;
+
+	if (str == NULL)
+		str = "(null)";
+	while (*str != '\0')
+	{
+		count += _putchar(*str);
+		str++;
+	}
+
+	return (count);
+}
