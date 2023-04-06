@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/_printf.dir/main.c.o.d"
   "CMakeFiles/_printf.dir/ops1.c.o"
   "CMakeFiles/_printf.dir/ops1.c.o.d"
+  "CMakeFiles/_printf.dir/utilities.c.o"
+  "CMakeFiles/_printf.dir/utilities.c.o.d"
   "_printf"
   "_printf.pdb"
 )
