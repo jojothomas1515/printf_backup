@@ -99,17 +99,18 @@ int print_binary(va_list ap)
 	int i;
 	uint num = (int) va_arg(ap, int);
 
+	if (b_str == NULL)
+		return (0);
 	if (num == 0)
 		return (_putchar('0'));
 
 	for (i = 0; num > 0; i++)
 	{
-		b_str[i] = (char) (num / 2);
+		b_str[i] = (num % 2) + '0';
 		num /= 2;
 	}
 	b_str[i] = '\0';
 
 	_strrev(b_str);
-
 	return (p_str(b_str));
 }

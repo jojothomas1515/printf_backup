@@ -14,10 +14,10 @@ int (*get_ops(char c))(va_list ap)
 			    {'%', print_percent},
 			    {'i', print_integer},
 			    {'d', print_integer},
-			    {'b', print_binary}
+			    {'b', print_binary},
 	};
 
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 7; i++)
 	{
 		if (c == ops[i].c)
 			return (ops[i].func);
