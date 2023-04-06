@@ -228,15 +228,6 @@ CMakeFiles/_printf.dir/main.c.o: ../main.c \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   ../main.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
@@ -359,20 +350,6 @@ CMakeFiles/_printf.dir/utilities.c.o: ../utilities.c \
 
 ../ops1.c:
 
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/limits.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h:
-
 ../get_ops.c:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
@@ -479,8 +456,6 @@ CMakeFiles/_printf.dir/utilities.c.o: ../utilities.c \
 
 /usr/include/endian.h:
 
-/usr/include/linux/limits.h:
-
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
@@ -496,8 +471,6 @@ CMakeFiles/_printf.dir/utilities.c.o: ../utilities.c \
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
