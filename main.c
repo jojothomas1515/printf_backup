@@ -10,5 +10,5 @@
 int main(void)
 {
 
-	return (_printf("%i\n", -2200));
+	return (_printf("%Kds\n", -2200));
 }
