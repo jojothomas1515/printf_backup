@@ -1,1 +1,1 @@
-/usr/bin/cc -g -Wall -Werror -Wextra -pedantic -std=gnu89 -g -rdynamic CMakeFiles/_printf.dir/main.c.o CMakeFiles/_printf.dir/_printf.c.o CMakeFiles/_printf.dir/_putchar.c.o CMakeFiles/_printf.dir/get_ops.c.o CMakeFiles/_printf.dir/ops1.c.o CMakeFiles/_printf.dir/utilities.c.o -o _printf 
+/usr/bin/cc -g -rdynamic CMakeFiles/_printf.dir/main.c.o CMakeFiles/_printf.dir/_printf.c.o CMakeFiles/_printf.dir/_putchar.c.o CMakeFiles/_printf.dir/get_ops.c.o CMakeFiles/_printf.dir/ops1.c.o CMakeFiles/_printf.dir/utilities.c.o -o _printf 
