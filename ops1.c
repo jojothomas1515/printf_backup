@@ -53,6 +53,7 @@ int print_percent(va_list ap)
 int print_integer(va_list ap)
 {
 	int num = va_arg(ap, int), count = 0, sign = 0, i = 0;
+	unsigned  int u_num;
 	char *num_str = malloc(1024);
 
 	if (num_str == NULL)
@@ -61,13 +62,13 @@ int print_integer(va_list ap)
 	if (num < 0)
 	{
 		sign = 1;
-		num *= -1;
+		u_num = num * -1;
 	}
 
-	while (num > 0)
+	while (u_num > 0)
 	{
-		num_str[i] = (num  % 10) + '0';
-		num /= 10;
+		num_str[i] = (u_num  % 10) + '0';
+		u_num /= 10;
 
 		i++;
 	}
