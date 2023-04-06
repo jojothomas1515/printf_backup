@@ -116,10 +116,13 @@ int print_String(va_list ap)
 		str = "(null)";
 	while (*str != '\0')
 	{
-		if ((int)*str < 37 || (int)*str >= 127)
-			count += p_str("\\x");
-		else
+		if (*str > 32 && *str < 127)
+		{
 			count += _putchar(*str);
+
+		} else
+			count += p_hex(*str);
+
 		str++;
 	}
 

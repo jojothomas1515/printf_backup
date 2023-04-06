@@ -34,6 +34,7 @@ int print_octal(va_list);
 int print_hex(va_list);
 int print_HEX(va_list);
 int print_String(va_list ap);
+int p_hex(int hex);
 
 /* utilities */
 int _strlen(char *);
