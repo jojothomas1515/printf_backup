@@ -64,6 +64,8 @@ int print_integer(va_list ap)
 		sign = 1;
 		u_num = num * -1;
 	}
+	else
+		u_num = num;
 
 	while (u_num > 0)
 	{
