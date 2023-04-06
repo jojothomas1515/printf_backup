@@ -58,20 +58,19 @@ int print_integer(va_list ap)
 
 	if (num_str == NULL)
 		return (0);
-
-	if (num < 0)
+	if (num == 0)
+		return (_putchar('0'));
+	else if (num < 0)
 	{
 		sign = 1;
 		u_num = num * -1;
 	}
 	else
 		u_num = num;
-
 	while (u_num > 0)
 	{
 		num_str[i] = (u_num  % 10) + '0';
 		u_num /= 10;
-
 		i++;
 	}
 	if (sign)
@@ -86,6 +85,5 @@ int print_integer(va_list ap)
 		count += _putchar(*num_str);
 		num_str++;
 	}
-
 	return (count);
 }
