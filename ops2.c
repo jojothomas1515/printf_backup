@@ -102,3 +102,26 @@ int print_HEX(va_list ap)
 	return (p_str(h_str));
 }
 
+/**
+ * print_String - print string and print special characters as \x
+ * @ap: va list
+ * Return: print count
+ */
+int print_String(va_list ap)
+{
+	int count = 0;
+	char *str = va_arg(ap, char *);
+
+	if (str == NULL)
+		str = "(null)";
+	while (*str != '\0')
+	{
+		if ((int)*str < 37 || (int)*str >= 127)
+			count += p_str("\\x");
+		else
+			count += _putchar(*str);
+		str++;
+	}
+
+	return (count);
+}

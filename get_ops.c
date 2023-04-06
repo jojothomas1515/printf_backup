@@ -19,9 +19,10 @@ int (*get_ops(char c))(va_list ap)
 			    {'o', print_octal},
 			    {'x', print_hex},
 			    {'X', print_HEX},
+			    {'S', print_String},
 	};
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 11; i++)
 	{
 		if (c == ops[i].c)
 			return (ops[i].func);

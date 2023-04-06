@@ -33,6 +33,7 @@ int print_unsigned(va_list);
 int print_octal(va_list);
 int print_hex(va_list);
 int print_HEX(va_list);
+int print_String(va_list ap);
 
 /* utilities */
 int _strlen(char *);
