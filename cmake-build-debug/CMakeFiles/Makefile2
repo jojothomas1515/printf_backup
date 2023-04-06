@@ -81,12 +81,12 @@ clean: CMakeFiles/_printf.dir/clean
 CMakeFiles/_printf.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_printf.dir/build.make CMakeFiles/_printf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_printf.dir/build.make CMakeFiles/_printf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jojo/CLionProjects/printf/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target _printf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jojo/CLionProjects/printf/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target _printf"
 .PHONY : CMakeFiles/_printf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/_printf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jojo/CLionProjects/printf/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jojo/CLionProjects/printf/cmake-build-debug/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/_printf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jojo/CLionProjects/printf/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/_printf.dir/rule

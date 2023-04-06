@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/jojo/CLionProjects/printf/main.c" "CMakeFiles/_printf.dir/main.c.o" "gcc" "CMakeFiles/_printf.dir/main.c.o.d"
   "/home/jojo/CLionProjects/printf/ops1.c" "CMakeFiles/_printf.dir/ops1.c.o" "gcc" "CMakeFiles/_printf.dir/ops1.c.o.d"
   "/home/jojo/CLionProjects/printf/ops2.c" "CMakeFiles/_printf.dir/ops2.c.o" "gcc" "CMakeFiles/_printf.dir/ops2.c.o.d"
+  "/home/jojo/CLionProjects/printf/ops3.c" "CMakeFiles/_printf.dir/ops3.c.o" "gcc" "CMakeFiles/_printf.dir/ops3.c.o.d"
   "/home/jojo/CLionProjects/printf/utilities.c" "CMakeFiles/_printf.dir/utilities.c.o" "gcc" "CMakeFiles/_printf.dir/utilities.c.o.d"
   )
 
