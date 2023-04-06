@@ -100,6 +100,9 @@
 		<Unit filename="/home/jojo/CLionProjects/printf/ops1.c">
 			<Option target="_printf"/>
 		</Unit>
+		<Unit filename="/home/jojo/CLionProjects/printf/ops2.c">
+			<Option target="_printf"/>
+		</Unit>
 		<Unit filename="/home/jojo/CLionProjects/printf/utilities.c">
 			<Option target="_printf"/>
 		</Unit>

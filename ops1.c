@@ -54,7 +54,7 @@ int print_integer(va_list ap)
 {
 	int num = va_arg(ap, int), count = 0, sign = 0, i = 0;
 	unsigned int u_num;
-	char *num_str = malloc(1024);
+	char *num_str = malloc(BUFFER_SIZE);
 
 	if (num_str == NULL)
 		return (0);
@@ -95,7 +95,7 @@ int print_integer(va_list ap)
 
 int print_binary(va_list ap)
 {
-	char *b_str = malloc(1024);
+	char *b_str = malloc(BUFFER_SIZE);
 	int i;
 	uint num = (int) va_arg(ap, int);
 
