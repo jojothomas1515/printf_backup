@@ -11,9 +11,11 @@ int (*get_ops(char c))(va_list ap)
 	int i;
 	operations ops[] = {{'c', print_char},
 			    {'s', print_str},
-			    {'%', print_percent}};
+			    {'%', print_percent},
+			    {'i', print_integer},
+			    {'d', print_integer}};
 
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < 5; i++)
 	{
 		if (c == ops[i].c)
 			return (ops[i].func);

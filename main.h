@@ -24,6 +24,10 @@ int _putchar(char c);
 int print_char(va_list);
 int print_str(va_list);
 int print_percent(va_list);
+int print_integer(va_list);
+
+int _strlen(char *);
+void _strrev(char *);
 
 int (*get_ops(char))(va_list);
 
