@@ -5,7 +5,7 @@
 		<Option title="_printf"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\.clion-vcpkg\;CMake Files\..\..\.clion-vcpkg\vcpkg\;CMake Files\..\..\.clion-vcpkg\vcpkg\scripts\;CMake Files\..\..\.clion-vcpkg\vcpkg\scripts\buildsystems\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/jojo/CLionProjects/printf/cmake-build-debug"/>
@@ -111,6 +111,9 @@
 		</Unit>
 		<Unit filename="/home/jojo/CLionProjects/printf/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/jojo/CLionProjects/printf/../../.clion-vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\.clion-vcpkg\vcpkg\scripts\buildsystems\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -6,22 +6,13 @@
  * Return: a function
  */
 
-int (*get_ops(char c))(va_list ap)
+int (*get_ops(char c))(va_list ap, fpw_t *mod)
 {
 	int i;
-	operations ops[] = {{'c', print_char},
-			    {'s', print_str},
-			    {'%', print_percent},
-			    {'i', print_integer},
-			    {'d', print_integer},
-			    {'b', print_binary},
-			    {'u', print_unsigned},
-			    {'o', print_octal},
-			    {'x', print_hex},
-			    {'X', print_HEX},
-			    {'S', print_String},
-			    {'p', print_voidp},
-	};
+	operations ops[] =
+		{{'c', print_char}, {'s', print_str}, {'%', print_percent}, {'i', print_integer}, {'d', print_integer},
+		 {'b', print_binary}, {'u', print_unsigned}, {'o', print_octal}, {'x', print_hex}, {'X', print_HEX},
+		 {'S', print_String}, {'p', print_voidp},};
 
 	for (i = 0; i < 12; i++)
 	{
@@ -31,8 +22,14 @@ int (*get_ops(char c))(va_list ap)
 	return (0);
 }
 
-/*
-int handle_flag(char *format, int *i)
+void handle_flag(const char *format, int *i, fpw_t *mod)
 {
-	return (0);
-}*/
+	if (format == NULL)
+		return;
+
+	if (format[*i] == '+')
+	{
+		mod->flag = E_PLUS;
+		(*i)++;
+	}
+}

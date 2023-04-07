@@ -5,12 +5,13 @@
  * @ap: va list
  * Return: print count
  */
-int print_voidp(va_list ap)
+int print_voidp(va_list ap, fpw_t *mod)
 {
 	char *h_str = malloc(BUFFER_SIZE);
 	unsigned long num, i;
 	char *arr = "0123456789abcdef";
 
+	(void) mod;
 	num = (unsigned long int) va_arg(ap, unsigned long int);
 	if (h_str == NULL)
 		return (0);

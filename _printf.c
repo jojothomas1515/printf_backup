@@ -10,32 +10,31 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int write_count = 0;
+	int write_count = 0, i;
+	fpw_t mod;
 
 	va_start(ap, format);
 	if (format == NULL)
 		return (-1);
-	while (*format != '\0')
+	for (i = 0;format[i] != '\0'; i++)
 	{
-		if (*format == '%')
+		if (format[i] == '%')
 		{
-			format++;
-
-			if (get_ops(*format) != 0)
+			i++;
+			handle_flag(format, &i, &mod);
+			if (get_ops(format[i]) != 0)
 			{
-				write_count += get_ops(*format)(ap);
-				format++;
+				write_count += get_ops(format[i])(ap, &mod);
 				continue;
-			} else if (*format != '\0')
+			} else if (format[i] != '\0')
 			{
-				format--;
+				i--;
 				goto print_format;
 			}
 			return (-1);
 		}
 print_format:
-		write_count += _putchar(*format);
-		format++;
+		write_count += _putchar(format[i]);
 	}
 	va_end(ap);
 	return (write_count);

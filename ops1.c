@@ -1,14 +1,15 @@
 #include "main.h"
 
-
 /**
  * print_char - print character
  * @ap: va_list
  * Return: count
  */
-int print_char(va_list ap)
+int print_char(va_list ap, fpw_t *mod)
 {
 	char c = va_arg(ap, int);
+
+	(void) mod;
 
 	return (_putchar(c));
 }
@@ -18,11 +19,12 @@ int print_char(va_list ap)
  * @ap: va_list
  * Return: count
  */
-int print_str(va_list ap)
+int print_str(va_list ap, fpw_t *mod)
 {
 	int count = 0;
 	char *str = va_arg(ap, char *);
 
+	(void) mod;
 	if (str == NULL)
 		str = "(null)";
 	while (*str != '\0')
@@ -39,10 +41,11 @@ int print_str(va_list ap)
  * @ap: va_list
  * Return: 1
  */
-int print_percent(va_list ap)
+int print_percent(va_list ap, fpw_t *mod)
 {
 	(void) ap;
 
+	(void) mod;
 	return (_putchar('%'));
 }
 
@@ -51,12 +54,15 @@ int print_percent(va_list ap)
  * @ap: va_list
  * Return: write_count
 */
-int print_integer(va_list ap)
+int print_integer(va_list ap, fpw_t *mod)
 {
 	int num = va_arg(ap, int), count = 0, sign = 0, i = 0;
 	unsigned int u_num;
 	char *num_str = malloc(BUFFER_SIZE);
 
+	if (num >= 0 && mod->flag == E_PLUS)
+		count += _putchar('+');
+	(void) mod;
 	if (num_str == NULL)
 		return (0);
 	if (num == 0)
@@ -94,12 +100,13 @@ int print_integer(va_list ap)
  * Return: count of with is printed
  */
 
-int print_binary(va_list ap)
+int print_binary(va_list ap, fpw_t *mod)
 {
 	char *b_str = malloc(BUFFER_SIZE);
 	int i;
 	uint num = (int) va_arg(ap, int);
 
+	(void) mod;
 	if (b_str == NULL)
 		return (0);
 	if (num == 0)
