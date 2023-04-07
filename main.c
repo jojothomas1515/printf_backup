@@ -11,8 +11,8 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("%+d\n", 2024);
-	len2 = printf("%#x\n", 22);
+	len = _printf("%#x\n", 2024);
+	len2 = printf("%#x\n", 2024);
 	fflush(stdout);
 	if (len != len2)
 	{

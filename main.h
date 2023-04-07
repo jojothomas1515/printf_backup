@@ -39,7 +39,7 @@ typedef struct operations_s
 enum flags
 {
 	E_PLUS = 1,
-	E_MINUS,
+	E_SPACE,
 	E_HASH
 };
 
