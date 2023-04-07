@@ -9,9 +9,12 @@
 int print_unsigned(va_list ap, fpw_t *mod)
 {
 	char *u_str = malloc(BUFFER_SIZE);
-	uint num = (uint) va_arg(ap, int), i;
+	ulong num = (ulong) va_arg(ap, unsigned long int), i;
 
-	(void) mod;
+	if (mod->length == E_SHORT)
+		num = (unsigned short int) num;
+	else if (mod->length != E_LONG)
+		num = (unsigned int) num;
 	if (u_str == NULL)
 		return (0);
 	if (num == 0)
@@ -39,9 +42,9 @@ int print_octal(va_list ap, fpw_t *mod)
 	ulong num = (ulong) va_arg(ap, unsigned long int), i, count = 0;
 
 	if (mod->length == E_SHORT)
-		num = (unsigned short int)num;
+		num = (unsigned short int) num;
 	else if (mod->length != E_LONG)
-		num = (unsigned int)num;
+		num = (unsigned int) num;
 	if (num > 0 && mod->flag == E_HASH)
 		count += _putchar('0');
 	if (o_str == NULL)
@@ -73,9 +76,9 @@ int print_hex(va_list ap, fpw_t *mod)
 	char *arr = "0123456789abcdef";
 
 	if (mod->length == E_SHORT)
-		num = (unsigned short int)num;
+		num = (unsigned short int) num;
 	else if (mod->length != E_LONG)
-		num = (unsigned int)num;
+		num = (unsigned int) num;
 	if (num > 0 && mod->flag == E_HASH)
 		count += p_str("0x");
 	if (h_str == NULL)
@@ -107,9 +110,9 @@ int print_HEX(va_list ap, fpw_t *mod)
 	char *arr = "0123456789ABCDEF";
 
 	if (mod->length == E_SHORT)
-		num = (unsigned short int)num;
+		num = (unsigned short int) num;
 	else if (mod->length != E_LONG)
-		num = (unsigned int)num;
+		num = (unsigned int) num;
 	if (num > 0 && mod->flag == E_HASH)
 		count += p_str("0X");
 	if (h_str == NULL)
