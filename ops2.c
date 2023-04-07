@@ -34,9 +34,10 @@ int print_unsigned(va_list ap, fpw_t *mod)
 int print_octal(va_list ap, fpw_t *mod)
 {
 	char *o_str = malloc(BUFFER_SIZE);
-	uint num = (uint) va_arg(ap, int), i;
+	uint num = (uint) va_arg(ap, int), i, count = 0;
 
-	(void) mod;
+	if (num > 0 && mod->flag == E_HASH)
+		count += _putchar('0');
 	if (o_str == NULL)
 		return (0);
 	if (num == 0)
@@ -49,7 +50,8 @@ int print_octal(va_list ap, fpw_t *mod)
 	}
 	o_str[i] = '\0';
 	_strrev(o_str);
-	return (p_str(o_str));
+	count += p_str(o_str);
+	return (count);
 }
 
 /**
