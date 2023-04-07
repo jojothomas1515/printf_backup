@@ -31,3 +31,8 @@ int (*get_ops(char c))(va_list ap)
 	return (0);
 }
 
+/*
+int handle_flag(char *format, int *i)
+{
+	return (0);
+}*/
