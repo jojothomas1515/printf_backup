@@ -29,7 +29,8 @@ int print_str(va_list ap, fpw_t *mod)
 
 	if (temp == NULL)
 		temp = "(null)";
-
+	if (str == NULL)
+		return (0);
 	for (i = 0; temp[i] != '\0'; i++)
 		str[i] = temp[i];
 
