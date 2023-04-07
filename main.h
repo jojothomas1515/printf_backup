@@ -20,6 +20,7 @@
 typedef struct fpw_s
 {
 	int flag: 4;
+	int length: 4;
 	int width: 4;
 	int precision;
 } fpw_t;
@@ -41,6 +42,12 @@ enum flags
 	E_PLUS = 1,
 	E_SPACE,
 	E_HASH
+};
+
+enum l_flags
+{
+	E_LONG = 1,
+	E_SHORT
 };
 
 /* prototype */

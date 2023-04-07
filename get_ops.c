@@ -9,8 +9,8 @@
 int (*get_ops(char c))(va_list ap, fpw_t *mod)
 {
 	int i;
-	operations ops[] =
-		{{'c', print_char}, {'s', print_str},
+	operations ops[] = {
+		{'c', print_char}, {'s', print_str},
 		 {'%', print_percent}, {'i', print_integer},
 		 {'d', print_integer}, {'b', print_binary},
 		 {'u', print_unsigned}, {'o', print_octal},
@@ -35,17 +35,18 @@ void handle_flag(const char *format, int *i, fpw_t *mod)
 {
 	int j;
 	const char *arr = "+ #";
+	const char *length = "lh";
 	const int flags[] = {E_PLUS, E_SPACE, E_HASH};
+	const int l_flags[] = {E_LONG, E_SHORT};
 
 	if (format == NULL)
 		return;
-
 	for (j = 0; arr[j] != '\0'; j++)
 	{
 		if (format[*i] == arr[j])
 		{
-			if ((flags[j] == E_PLUS && format[(*i)+1] == ' ')
-			|| (flags[j] == E_SPACE && format[(*i)+1] == '+'))
+			if ((flags[j] == E_PLUS && format[(*i) + 1] == ' ')
+				|| (flags[j] == E_SPACE && format[(*i) + 1] == '+'))
 			{
 				(*i)++;
 				mod->flag = E_PLUS;
@@ -56,4 +57,10 @@ void handle_flag(const char *format, int *i, fpw_t *mod)
 		}
 	}
 
+	for (j = 0; length[j] != '\0'; j++)
+		if (format[*i] == length[j])
+		{
+			mod->length = l_flags[j];
+			(*i)++;
+		}
 }
