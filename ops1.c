@@ -67,7 +67,7 @@ int print_integer(va_list ap, fpw_t *mod)
 	if (num_str == NULL)
 		return (0);
 	if (num == 0)
-		return (_putchar('0'));
+		return ((_putchar('0')) + count);
 	else if (num < 0)
 	{
 		sign = 1;
