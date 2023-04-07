@@ -23,17 +23,21 @@ int print_char(va_list ap, fpw_t *mod)
  */
 int print_str(va_list ap, fpw_t *mod)
 {
-	int count = 0;
-	char *str = va_arg(ap, char *);
+	int count = 0, i;
+	char *temp = va_arg(ap, char *);
+	char *str = malloc(1024);
 
-	(void) mod;
-	if (str == NULL)
-		str = "(null)";
-	while (*str != '\0')
-	{
-		count += _putchar(*str);
-		str++;
-	}
+	if (temp == NULL)
+		temp = "(null)";
+
+	for (i = 0; temp[i] != '\0'; i++)
+		str[i] = temp[i];
+
+	if (mod->reverse == 1)
+		_strrev(str);
+	count += p_str(str);
+
+	free(str);
 	return (count);
 }
 

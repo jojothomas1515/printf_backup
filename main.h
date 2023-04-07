@@ -23,6 +23,7 @@ typedef struct fpw_s
 	int length: 4;
 	int width: 4;
 	int precision;
+	int reverse;
 } fpw_t;
 
 /**

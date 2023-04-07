@@ -15,9 +15,10 @@ int (*get_ops(char c))(va_list ap, fpw_t *mod)
 		 {'d', print_integer}, {'b', print_binary},
 		 {'u', print_unsigned}, {'o', print_octal},
 		 {'x', print_hex}, {'X', print_HEX},
-		 {'S', print_String}, {'p', print_voidp},};
+		 {'S', print_String}, {'p', print_voidp},
+		{'r', print_str}};
 
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 13; i++)
 	{
 		if (c == ops[i].c)
 			return (ops[i].func);
@@ -41,6 +42,12 @@ void handle_flag(const char *format, int *i, fpw_t *mod)
 
 	if (format == NULL)
 		return;
+	if (format[*i] == 'r')
+	{
+		mod->reverse = 1;
+	}
+	else
+		mod->reverse = 0;
 	for (j = 0; arr[j] != '\0'; j++)
 	{
 		if (format[*i] == arr[j])
