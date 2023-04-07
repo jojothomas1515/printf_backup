@@ -60,10 +60,11 @@ int print_octal(va_list ap, fpw_t *mod)
 int print_hex(va_list ap, fpw_t *mod)
 {
 	char *h_str = malloc(BUFFER_SIZE);
-	uint num = (uint) va_arg(ap, int), i;
+	uint num = (uint) va_arg(ap, int), i, count = 0;
 	char *arr = "0123456789abcdef";
 
-	(void) mod;
+	if (num > 0 && mod->flag == E_HASH)
+		count += p_str("0x");
 	if (h_str == NULL)
 		return (0);
 	if (num == 0)
@@ -76,7 +77,8 @@ int print_hex(va_list ap, fpw_t *mod)
 	}
 	h_str[i] = '\0';
 	_strrev(h_str);
-	return (p_str(h_str));
+	count += p_str(h_str);
+	return (count);
 }
 
 /**
@@ -87,10 +89,11 @@ int print_hex(va_list ap, fpw_t *mod)
 int print_HEX(va_list ap, fpw_t *mod)
 {
 	char *h_str = malloc(BUFFER_SIZE);
-	uint num = (uint) va_arg(ap, int), i;
+	uint num = (uint) va_arg(ap, int), i, count = 0;
 	char *arr = "0123456789ABCDEF";
 
-	(void) mod;
+	if (num > 0 && mod->flag == E_HASH)
+		count += p_str("0X");
 	if (h_str == NULL)
 		return (0);
 	if (num == 0)
@@ -103,7 +106,8 @@ int print_HEX(va_list ap, fpw_t *mod)
 	}
 	h_str[i] = '\0';
 	_strrev(h_str);
-	return (p_str(h_str));
+	count += p_str(h_str);
+	return (count);
 }
 
 /**
@@ -125,7 +129,8 @@ int print_String(va_list ap, fpw_t *mod)
 		{
 			count += _putchar(*str);
 
-		} else
+		}
+		else
 			count += p_hex(*str);
 
 		str++;

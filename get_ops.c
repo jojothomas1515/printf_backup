@@ -24,12 +24,20 @@ int (*get_ops(char c))(va_list ap, fpw_t *mod)
 
 void handle_flag(const char *format, int *i, fpw_t *mod)
 {
+	int j;
+	const char *arr = "+ #";
+	const int flags[] = {E_PLUS, E_SPACE, E_HASH};
+
 	if (format == NULL)
 		return;
 
-	if (format[*i] == '+')
+	for (j = 0; arr[j] != '\0'; j++)
 	{
-		mod->flag = E_PLUS;
-		(*i)++;
+		if (format[*i] == arr[j])
+		{
+			mod->flag = flags[j];
+			(*i)++;
+		}
 	}
+
 }

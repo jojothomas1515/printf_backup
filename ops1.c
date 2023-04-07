@@ -62,7 +62,8 @@ int print_integer(va_list ap, fpw_t *mod)
 
 	if (num >= 0 && mod->flag == E_PLUS)
 		count += _putchar('+');
-	(void) mod;
+	else if (num >= 0 && mod->flag == E_SPACE)
+		count += _putchar(' ');
 	if (num_str == NULL)
 		return (0);
 	if (num == 0)
