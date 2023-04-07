@@ -5,11 +5,12 @@
  * @ap: va list
  * Return: print count
  */
-int print_unsigned(va_list ap)
+int print_unsigned(va_list ap, fpw_t *mod)
 {
 	char *u_str = malloc(BUFFER_SIZE);
 	uint num = (uint) va_arg(ap, int), i;
 
+	(void) mod;
 	if (u_str == NULL)
 		return (0);
 	if (num == 0)
@@ -30,11 +31,12 @@ int print_unsigned(va_list ap)
  * @ap: va list
  * Return: print count
  */
-int print_octal(va_list ap)
+int print_octal(va_list ap, fpw_t *mod)
 {
 	char *o_str = malloc(BUFFER_SIZE);
 	uint num = (uint) va_arg(ap, int), i;
 
+	(void) mod;
 	if (o_str == NULL)
 		return (0);
 	if (num == 0)
@@ -55,12 +57,13 @@ int print_octal(va_list ap)
  * @ap: va list
  * Return: print count
  */
-int print_hex(va_list ap)
+int print_hex(va_list ap, fpw_t *mod)
 {
 	char *h_str = malloc(BUFFER_SIZE);
 	uint num = (uint) va_arg(ap, int), i;
 	char *arr = "0123456789abcdef";
 
+	(void) mod;
 	if (h_str == NULL)
 		return (0);
 	if (num == 0)
@@ -81,12 +84,13 @@ int print_hex(va_list ap)
  * @ap: va list
  * Return: print count
  */
-int print_HEX(va_list ap)
+int print_HEX(va_list ap, fpw_t *mod)
 {
 	char *h_str = malloc(BUFFER_SIZE);
 	uint num = (uint) va_arg(ap, int), i;
 	char *arr = "0123456789ABCDEF";
 
+	(void) mod;
 	if (h_str == NULL)
 		return (0);
 	if (num == 0)
@@ -107,11 +111,12 @@ int print_HEX(va_list ap)
  * @ap: va list
  * Return: print count
  */
-int print_String(va_list ap)
+int print_String(va_list ap, fpw_t *mod)
 {
 	int count = 0;
 	char *str = va_arg(ap, char *);
 
+	(void) mod;
 	if (str == NULL)
 		str = "(null)";
 	while (*str != '\0')
