@@ -3,6 +3,7 @@
 /**
  * print_unsigned - print unsigned integers
  * @ap: va list
+ * @mod: modifier structure
  * Return: print count
  */
 int print_unsigned(va_list ap, fpw_t *mod)
@@ -29,13 +30,18 @@ int print_unsigned(va_list ap, fpw_t *mod)
 /**
  * print_octal - print out the octal representation of uint
  * @ap: va list
+ * @mod: modifier structure
  * Return: print count
  */
 int print_octal(va_list ap, fpw_t *mod)
 {
 	char *o_str = malloc(BUFFER_SIZE);
-	uint num = (uint) va_arg(ap, int), i, count = 0;
+	ulong num = (ulong) va_arg(ap, unsigned long int), i, count = 0;
 
+	if (mod->length == E_SHORT)
+		num = (unsigned short int)num;
+	else if (mod->length != E_LONG)
+		num = (unsigned int)num;
 	if (num > 0 && mod->flag == E_HASH)
 		count += _putchar('0');
 	if (o_str == NULL)
@@ -57,14 +63,19 @@ int print_octal(va_list ap, fpw_t *mod)
 /**
  * print_hex - print out the hexadecimal representation of uint
  * @ap: va list
+ * @mod: modifier structure
  * Return: print count
  */
 int print_hex(va_list ap, fpw_t *mod)
 {
 	char *h_str = malloc(BUFFER_SIZE);
-	uint num = (uint) va_arg(ap, int), i, count = 0;
+	ulong num = (ulong) va_arg(ap, unsigned long int), i, count = 0;
 	char *arr = "0123456789abcdef";
 
+	if (mod->length == E_SHORT)
+		num = (unsigned short int)num;
+	else if (mod->length != E_LONG)
+		num = (unsigned int)num;
 	if (num > 0 && mod->flag == E_HASH)
 		count += p_str("0x");
 	if (h_str == NULL)
@@ -86,14 +97,19 @@ int print_hex(va_list ap, fpw_t *mod)
 /**
  * print_HEX - print out the hexadecimal representation of uint
  * @ap: va list
+ * @mod: modifier structure
  * Return: print count
  */
 int print_HEX(va_list ap, fpw_t *mod)
 {
 	char *h_str = malloc(BUFFER_SIZE);
-	uint num = (uint) va_arg(ap, int), i, count = 0;
+	ulong num = (ulong) va_arg(ap, unsigned long int), i, count = 0;
 	char *arr = "0123456789ABCDEF";
 
+	if (mod->length == E_SHORT)
+		num = (unsigned short int)num;
+	else if (mod->length != E_LONG)
+		num = (unsigned int)num;
 	if (num > 0 && mod->flag == E_HASH)
 		count += p_str("0X");
 	if (h_str == NULL)
@@ -115,6 +131,7 @@ int print_HEX(va_list ap, fpw_t *mod)
 /**
  * print_String - print string and print special characters as \x
  * @ap: va list
+ * @mod: modifier structure
  * Return: print count
  */
 int print_String(va_list ap, fpw_t *mod)

@@ -2,7 +2,8 @@
 
 /**
  * print_char - print character
- * @ap: va_list
+ * @ap: va list
+ * @mod: modifier structure
  * Return: count
  */
 int print_char(va_list ap, fpw_t *mod)
@@ -16,7 +17,8 @@ int print_char(va_list ap, fpw_t *mod)
 
 /**
  * print_str - print string
- * @ap: va_list
+ * @ap: va list
+ * @mod: modifier structure
  * Return: count
  */
 int print_str(va_list ap, fpw_t *mod)
@@ -32,13 +34,13 @@ int print_str(va_list ap, fpw_t *mod)
 		count += _putchar(*str);
 		str++;
 	}
-
 	return (count);
 }
 
 /**
  * print_percent - print percent
- * @ap: va_list
+ * @ap: va list
+ * @mod: modifier structure
  * Return: 1
  */
 int print_percent(va_list ap, fpw_t *mod)
@@ -51,15 +53,20 @@ int print_percent(va_list ap, fpw_t *mod)
 
 /**
  * print_integer - print out an integer
- * @ap: va_list
+ * @ap: va list
+ * @mod: modifier structure
  * Return: write_count
 */
 int print_integer(va_list ap, fpw_t *mod)
 {
-	int num = va_arg(ap, int), count = 0, sign = 0, i = 0;
-	unsigned int u_num;
+	long int num = va_arg(ap, long int), count = 0, sign = 0, i = 0;
+	unsigned long int u_num;
 	char *num_str = malloc(BUFFER_SIZE);
 
+	if (mod->length == E_SHORT)
+		num = (short int) num;
+	else if (mod->length != E_LONG)
+		num = (int) num;
 	if (num >= 0 && mod->flag == E_PLUS)
 		count += _putchar('+');
 	else if (num >= 0 && mod->flag == E_SPACE)
@@ -72,7 +79,8 @@ int print_integer(va_list ap, fpw_t *mod)
 	{
 		sign = 1;
 		u_num = num * -1;
-	} else
+	}
+	else
 		u_num = num;
 	while (u_num > 0)
 	{
@@ -81,23 +89,17 @@ int print_integer(va_list ap, fpw_t *mod)
 		i++;
 	}
 	if (sign)
-		num_str[i] = '-';
-	i++;
+		num_str[i++] = '-';
 	num_str[i] = '\0';
 	_strrev(num_str);
-
-	i = 0;
-	while (num_str[i] != '\0')
-	{
-		count += _putchar(*num_str);
-		num_str++;
-	}
+	count += p_str(num_str);
 	return (count);
 }
 
 /**
  * print_binary - print out the binary representation of unsigned int
- * @ap: variadic list
+ * @ap: va list
+ * @mod: modifier structure
  * Return: count of with is printed
  */
 
@@ -105,9 +107,12 @@ int print_binary(va_list ap, fpw_t *mod)
 {
 	char *b_str = malloc(BUFFER_SIZE);
 	int i;
-	uint num = (int) va_arg(ap, int);
+	ulong num = (ulong) va_arg(ap, unsigned long int);
 
-	(void) mod;
+	if (mod->length == E_SHORT)
+		num = (unsigned short int) num;
+	else if (mod->length != E_LONG)
+		num = (unsigned int) num;
 	if (b_str == NULL)
 		return (0);
 	if (num == 0)

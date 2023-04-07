@@ -11,8 +11,8 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("%#o\n", 22);
-	len2 = printf("%#o\n", 22);
+	len = _printf("%hb\n", -2200000000000000);
+	len2 = printf("%hb\n", -2200000000000000);
 	fflush(stdout);
 	if (len != len2)
 	{
