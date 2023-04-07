@@ -11,8 +11,8 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("%lu\n", ULONG_MAX);
-	len2 = printf("%lu\n", ULONG_MAX);
+	len = _printf("%s\n", "hello jojo");
+	len2 = printf("%s\n", "hello jojo");
 	fflush(stdout);
 	if (len != len2)
 	{
